@@ -1,0 +1,116 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import WindowBox from "@/components/WindowBox.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { area, title, description, groups } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <article class="container">
+        <div class="prose">
+          <div class="title">
+            <p class="area text-pixel">{area}</p>
+            <h1>{title}</h1>
+            <p class="groups">
+              {groups?.map((item) => <span>{item}</span>)}
+            </p>
+          </div>
+          <WindowBox variant="dark">
+            <div class="content">
+              <slot />
+            </div>
+          </WindowBox>
+        </div>
+      </article>
+    </main>
+    <Footer variant="dark" />
+  </body>
+</html>
+
+<style>
+  article {
+    padding-block-end: 104px;
+  }
+
+  .area {
+    &:not(:last-child) {
+      margin-block-end: 24px;
+    }
+  }
+
+  .content {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:not(:last-child) {
+        margin-block: 56px 24px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      margin-inline: auto;
+    }
+
+    p:not(:last-child) {
+      margin-block-end: 24px;
+    }
+
+    p:has(img) {
+      &:not(:last-child) {
+        margin-block-end: 32px;
+      }
+    }
+
+    ul {
+      padding-inline-start: 20px;
+
+      &:not(:last-child) {
+        margin-block-end: 24px;
+      }
+    }
+  }
+
+  .groups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-inline: auto;
+    font-weight: 300;
+  }
+
+  .title {
+    padding-block: 64px 120px;
+    text-align: center;
+
+    h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: center;
+
+      @container main-container (width >= 1024px) {
+        font-size: 3rem;
+      }
+
+      &:not(:last-child) {
+        margin-block-end: 44px;
+      }
+    }
+  }
+</style>

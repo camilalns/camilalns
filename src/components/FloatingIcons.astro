@@ -1,0 +1,118 @@
+<div class="floating-icons">
+  <img data-item="machine" src="/svg/icon-machine.svg" />
+  <img data-item="movie" src="/svg/icon-movie.svg" />
+  <img data-item="book" src="/svg/icon-book.svg" />
+  <img data-item="paint" src="/svg/icon-paint.svg" />
+  <img data-item="headset" src="/svg/icon-headset.svg" />
+  <img data-item="camera" src="/svg/icon-camera.svg" />
+  <img data-item="fitness" src="/svg/icon-fitness.svg" />
+</div>
+
+<style>
+  .floating-icons {
+    width: 100%;
+    max-width: 390px;
+    position: relative;
+    margin-inline: auto;
+
+    @container main-container (width >= 1024px) {
+      max-width: none;
+      height: 100%;
+    }
+
+    img {
+      animation: float 3s ease-in-out infinite;
+      height: auto;
+
+      &[data-item="machine"] {
+        width: 93px;
+        margin-inline-start: 18%;
+        animation-delay: 1s;
+
+        @container main-container (width >= 1024px) {
+          width: 116px;
+        }
+      }
+
+      &[data-item="movie"] {
+        width: 99px;
+        margin-inline: auto 14%;
+        margin-block-start: -81px;
+
+        @container main-container (width >= 1024px) {
+          width: 154px;
+          margin-block-start: -40px;
+        }
+      }
+
+      &[data-item="book"] {
+        width: 99px;
+        animation-delay: 1.2s;
+        margin-block-start: -10px;
+
+        @container main-container (width >= 1024px) {
+          width: 136px;
+          margin-block-start: -35px;
+        }
+      }
+
+      &[data-item="paint"] {
+        width: 80px;
+        margin-inline: auto;
+        animation-delay: 0.5s;
+        margin-block-start: -50px;
+
+        @container main-container (width >= 1024px) {
+          width: 104px;
+        }
+      }
+
+      &[data-item="headset"] {
+        width: 86px;
+        margin-inline-start: auto;
+        animation-delay: 0.75s;
+        margin-block-start: -73px;
+
+        @container main-container (width >= 1024px) {
+          width: 115px;
+          margin-block-start: -105px;
+        }
+      }
+
+      &[data-item="camera"] {
+        width: 85px;
+        margin-inline-start: 10%;
+        animation-delay: 1.25s;
+        margin-block-start: -14px;
+
+        @container main-container (width >= 1024px) {
+          width: 125px;
+        }
+      }
+
+      &[data-item="fitness"] {
+        width: 99px;
+        margin-inline: auto 16%;
+        animation-delay: 1s;
+        margin-block-start: -54px;
+
+        @container main-container (width >= 1024px) {
+          width: 146px;
+          margin-block-start: -60px;
+        }
+      }
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>

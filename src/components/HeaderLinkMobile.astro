@@ -1,0 +1,65 @@
+---
+const { href, ...props } = Astro.props;
+
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^\/]+/g);
+const isActive = href === pathname || href === "/" + subpath?.[0];
+
+let hrefTarger = href;
+
+// Verifica se href é um anchor e ajusta o valor
+if (href.startsWith("#")) {
+  hrefTarger = `/${href}`;
+}
+---
+
+<a href={hrefTarger} class:list={[{ active: isActive }]} {...props}>
+  <span>
+    <slot />
+  </span>
+</a>
+
+<style>
+  a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-decoration: none;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding-block: 8px;
+      padding-inline: 12px;
+      margin-inline-start: -8px;
+      border-radius: 2px;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:where(:hover) {
+      span {
+        margin-inline-start: 0px;
+      }
+    }
+
+    &:where(:hover):not(.active) {
+      span {
+        background: var(--color-dark-primary-100);
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 3;
+    }
+  }
+
+  a.active {
+    span {
+      margin-inline-start: 0px;
+      background: var(--color-dark-primary-100);
+    }
+  }
+</style>

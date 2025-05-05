@@ -1,0 +1,93 @@
+<div class="container-text">
+  <div class="content">
+    <div class="window-element">
+      <slot name="window-element" />
+    </div>
+    <div class="side-element">
+      <slot />
+    </div>
+  </div>
+  <div aria-hidden="true" class="texts">
+    <p class="text-pixel">creative</p>
+    <p class="text-pixel">fast-learner</p>
+    <p class="text-pixel">strategic</p>
+    <p class="text-pixel">detail-oriented</p>
+  </div>
+</div>
+
+<style>
+  .container-text {
+    position: relative;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    position: relative;
+    z-index: 1;
+
+    @container main-container (width >= 1024px) {
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 44px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    font-size: 2.5rem;
+    color: var(--color-dark-line-1);
+
+    @container main-container (width >= 1024px) {
+      gap: 96px;
+      inset-block-start: -48px;
+      inset-inline-end: -16px;
+      font-size: 5rem;
+    }
+
+    p {
+      pointer-events: none;
+    }
+  }
+
+  .side-element {
+    order: 1;
+
+    @container main-container (width >= 1024px) {
+      order: 2;
+      width: 100%;
+    }
+
+    > figure {
+      margin-inline: auto;
+
+      img {
+        width: 100%;
+        max-width: 502px;
+        height: auto;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  .window-element {
+    order: 2;
+    width: 100%;
+    max-width: 594px;
+    margin-inline: auto;
+
+    @container main-container (width >= 1024px) {
+      order: 1;
+    }
+  }
+</style>

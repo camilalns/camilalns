@@ -1,0 +1,43 @@
+<div class="grid-skills">
+  <slot />
+</div>
+
+<style>
+  .grid-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+
+    @container main-container (width >= 1024px) {
+      flex-wrap: nowrap;
+      gap: 12px 12px;
+    }
+
+    > * {
+      width: 100%;
+
+      @container main-container (width >= 768px) {
+        max-width: calc(50% - 6px);
+      }
+
+      &:nth-child(1) {
+        @container main-container (width >= 1024px) {
+          max-width: calc(464px - 6px);
+        }
+      }
+
+      &:nth-child(2) {
+        @container main-container (width >= 1024px) {
+          max-width: calc(416px - 6px);
+        }
+      }
+
+      &:nth-child(3) {
+        @container main-container (width >= 1024px) {
+          max-width: calc(308px - 6px);
+        }
+      }
+    }
+  }
+</style>

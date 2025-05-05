@@ -1,0 +1,16 @@
+<div class="grid-projects">
+  <slot />
+</div>
+
+<style>
+  .grid-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(328px, 378px));
+    gap: 24px;
+    justify-content: center;
+
+    @container main-container (width >= 1024px) {
+      row-gap: 42px;
+    }
+  }
+</style>

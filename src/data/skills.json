@@ -1,0 +1,61 @@
+{
+  "tecnicas": {
+    "id": "tecnicas",
+    "title": "Técnicas",
+    "items": [
+      { "strong": "Design Visual:", "text": "Conhecimento de layout, tipografia, cores e composição para criar interfaces harmônicas e funcionais." },
+      { "strong": "UX Design:", "text": "Pesquisa de usuários, mapeamento de jornadas e criação de protótipos." },
+      { "strong": "UI Design:", "text": "Criação de interfaces com base em heurísticas de usabilidade e padrões de acessibilidade." },
+      { "strong": "Prototipagem:", "text": "Criação de protótipos interativos de baixa a alta fidelidade." },
+      { "strong": "Design System:", "text": "Construção e manutenção de sistemas de design consistentes." },
+        { "strong": "Noções de Código:", "text": "Entendimento de HTML, CSS e JavaScript." }
+    ]
+  },
+  "estrategicas": {
+    "id": "estrategicas",
+    "title": "Estratégicas",
+    "items": [
+      { "strong": "Design Thinking", "text": "" },
+      { "strong": "Metodológia Scrum e Kanban", "text": "" },
+      { "strong": "Estratégia de negócio:", "text": "Alinhar decisões de design aos objetivos do negócio." },
+      { "strong": "Gestão de Projetos:", "text": "Uso de ferramentas ágeis para priorização de features e acompanhamento de entregas de design." },
+      { "strong": "Mentalidade de produto orientada a dados:", "text": "Foco em NPS, churn, engajamento e conversão." }
+    ]
+  },
+  "analiticas": {
+    "id": "analiticas",
+    "title": "Analíticas",
+    "items": [
+      { "strong": "Pesquisa com usuários e análise de dados:", "text": "Capacidade de extrair insights acionáveis de dados qualitativos (ex: entrevistas, testes) e quantitativos (ex: métricas, pesquisas)." },
+      { "strong": "Testes de Usabilidade:", "text": "Planejar e executar testes com usuários." },
+      { "strong": "Análise de Métricas:", "text": "Avaliar KPIs para entender o impacto do design." }
+    ]
+  },
+  "soft": {
+    "id": "soft",
+    "title": "Soft Skills",
+    "items": [
+      { "strong": "Colaboração:", "text": "Trabalho em equipe com desenvolvedores, PMs e stakeholders." },
+      { "strong": "Comunicação:", "text": "Apresentar ideias e designs de forma clara e de interesse de cada membro envolvido no projeto." },
+      { "strong": "Resolução de Problemas:", "text": "Pensar de forma criativa para resolver desafios complexos." },
+      { "strong": "Adaptabilidade:", "text": "Ser flexível para lidar com mudanças e feedback." },
+      { "strong": "Facilitação de dinâmicas", "text": "como Design Sprint, brainstorming e card sorting com time e usuários." }
+    ]
+  },
+  "ferramentas": {
+    "id": "ferramentas",
+    "title": "Ferramentas",
+    "tools": [
+      "figma", "photoshop", "illustrator", "lightroom", "xd", "html", "css", "js"
+    ]
+  },
+  "idiomas": {
+    "id": "idiomas",
+    "title": "Idiomas",
+    "languages": [
+      { "flag": "br", "text": "Português - Nativo" },
+      { "flag": "us", "text": "Inglês - Avançado" },
+      { "flag": "mx", "text": "Espanhol - Básico" }
+    ]
+  }
+}

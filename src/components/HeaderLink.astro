@@ -1,0 +1,55 @@
+---
+const { href, class: className, ...props } = Astro.props;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const subpath = pathname.match(/[^\/]+/g);
+const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
+
+let hrefTarger = href;
+
+// Verifica se href é um anchor e ajusta o valor
+if (href.startsWith("#")) {
+  hrefTarger = `/${href}`;
+}
+---
+
+<a
+  href={hrefTarger}
+  class:list={[
+    className,
+    { active: isActive, highlight: Astro.props.highlight },
+  ]}
+  {...props}
+>
+  <slot />
+</a>
+<style>
+  a {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:not(.highlight):hover {
+      text-decoration: underline;
+    }
+  }
+
+  a.active {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  a.highlight {
+    padding-block: 8px;
+    padding-inline: 16px;
+    border: 1px solid #ff9cc1;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      #ecacc4 14.5%,
+      #ff97be 64%,
+      #f796bb 100%
+    );
+    box-shadow: 0px 0px 12px 0px #ecacc459;
+  }
+</style>

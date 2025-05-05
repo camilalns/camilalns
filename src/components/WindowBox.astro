@@ -1,0 +1,112 @@
+<div class="window-box" data-variant={Astro.props.variant || null}>
+  <header class="window-header">
+    {Astro.props.windowTitle && <p>{Astro.props.windowTitle}</p>}
+    <div class="window-controls">
+      <span class="min"></span>
+      <span class="square"></span>
+      <span class="close"></span>
+    </div>
+  </header>
+  <div class="window-content">
+    <h3 class="window-title text-pixel">
+      <slot name="icon" />
+      {Astro.props.title}
+    </h3>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .window-box {
+    border: 5px solid #f3fdfe;
+    color: #373737;
+    background: #f4f0ed;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    &[data-variant="dark"] {
+      color: var(--color-white);
+      background: var(--color-dark-primary-100);
+
+      .window-title {
+        @container main-container (width >= 1024px) {
+          font-size: 3.25rem;
+        }
+      }
+    }
+  }
+
+  .window-content {
+    padding-block: 24px;
+    padding-inline: 24px;
+  }
+
+  .window-controls {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-inline-start: auto;
+  }
+
+  .window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+    padding-block: 12px;
+    padding-inline: 24px;
+    border-block-end: 3px solid #f3fdfe;
+    line-height: 1;
+    color: var(--color-white);
+    background: var(--color-dark-third-100);
+
+    .min {
+      width: 14px;
+      height: 4px;
+      background: var(--color-white);
+    }
+
+    .square {
+      width: 12px;
+      height: 12px;
+      background: var(--color-white);
+    }
+
+    .close {
+      width: 14px;
+      height: 3px;
+      background: var(--color-white);
+      position: relative;
+      top: -4px;
+      rotate: 45deg;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 3px;
+        background: var(--color-white);
+        rotate: 90deg;
+      }
+    }
+  }
+
+  .window-title {
+    font-weight: 300;
+    font-size: 1.875rem;
+
+    &:not(:last-child) {
+      margin-block-end: 24px;
+    }
+
+    &:has(img) {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        min-width: 32px;
+        max-width: 32px;
+        height: 32px;
+      }
+    }
+  }
+</style>

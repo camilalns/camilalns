@@ -1,0 +1,101 @@
+---
+import WindowBox from "./WindowBox.astro";
+---
+
+<footer
+  class="footer section-grid-bg"
+  data-variant={Astro.props.variant || null}
+>
+  {
+    Astro.props.showLargeContent && (
+      <div class="container content-large">
+        <WindowBox windowTitle="Error" title="Out of coffee. Reboot required.">
+          <img
+            aria-hidden="true"
+            slot="icon"
+            src="/images/icon-error.webp"
+          />
+          <a class="link" href="#" target="_blank">
+            E-mail
+          </a>
+          <a class="link" href="#" target="_blank">
+            Linkedin
+          </a>
+        </WindowBox>
+        <figure>
+          <img aria-hidden="true" src="/svg/footer-pc.svg" />
+        </figure>
+      </div>
+    )
+  }
+  <div class="container content-small">
+    <p>2025 © Todos Direitos Reservados</p>
+  </div>
+</footer>
+
+<style>
+  .content-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-block: 72px;
+
+    @container main-container (width >= 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    > * {
+      &:nth-child(1) {
+        width: 100%;
+        max-width: 588px;
+      }
+    }
+
+    figure {
+      width: 100%;
+      max-width: 344px;
+    }
+  }
+
+  .content-small {
+    padding-block: 44px;
+    color: var(--color-dark-grey-300);
+    text-align: center;
+  }
+
+  .footer {
+    --_bg-line-color: var(--color-dark-line-2);
+
+    background-color: var(--color-dark-grey-100);
+
+    &[data-variant="dark"] {
+      --_bg-line-color: var(--color-dark-line-1);
+
+      background-color: var(--color-dark-primary-100);
+
+      .content-small {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .link {
+    display: block;
+    padding-block: 8px;
+    padding-inline: 8px;
+    border: 1px solid var(--color-dark-secondary-100);
+    border-radius: 2px;
+    font-weight: 500px;
+    font-size: 1rem;
+    color: var(--color-dark-grey-300);
+    text-align: center;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-block-end: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,371 @@
+---
+import { getCollection } from "astro:content";
+
+import BaseHead from "@/components/BaseHead.astro";
+import CardProject from "@/components/CardProject.astro";
+import ContainerText from "@/components/ContainerText.astro";
+import FloatingIcons from "@/components/FloatingIcons.astro";
+import Footer from "@/components/Footer.astro";
+import GridProjects from "@/components/GridProjects.astro";
+import GridSkills from "@/components/GridSkills.astro";
+import Header from "@/components/Header.astro";
+import WindowBox from "@/components/WindowBox.astro";
+
+import dataSkills from "@/data/skills.json";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+
+const skillsTextFirstColumn = [dataSkills.tecnicas, dataSkills.estrategicas];
+
+const skillsTextSecondColumn = [dataSkills.analiticas, dataSkills.soft];
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="hero-sub-title text-pixel">
+            UX/UI Designer | Product Designer
+          </p>
+          <h1 class="hero-title">
+            Olá! Sou a <span>Camila</span> e design é minha ferramenta para criar
+            <span>experiências</span> que conectam pessoas e negócios.
+          </h1>
+        </div>
+      </section>
+      <section class="projects section-container" id="meu-trabalho">
+        <div class="container">
+          <h2 class="section-title text-pixel">Meu trabalho</h2>
+          <GridProjects>
+            {
+              posts.map((post) => (
+                <CardProject
+                  title={post.data.title}
+                  area={post.data.area}
+                  image={post.data.heroImage}
+                  link={`/blog/${post.id}/`}
+                />
+              ))
+            }
+          </GridProjects>
+        </div>
+      </section>
+      <section class="more section-container" id="sobre-mim">
+        <div class="container">
+          <ContainerText>
+            <WindowBox
+              slot="window-element"
+              title="Minha jornada"
+              variant="dark"
+            >
+              <p class="text-window">
+                Sou <strong
+                  >pós-graduada em User Experience Design pela PUCRS</strong
+                > e acumulo
+                <strong>10 anos de experiência na área de tecnologia</strong>.
+                Com formação em
+                <strong>Análise e Desenvolvimento de Sistemas</strong> e experiência
+                como desenvolvedora front-end, trago uma visão técnica que me permite
+                criar soluções intuitivas e viáveis desde o início do projeto e me
+                ajuda na comunicação com o time de tecnologia.
+              </p>
+              <p class="text-window">
+                Como Product Designer, sou apaixonada por criar experiências que
+                realmente impactem os usuários. Minhas decisões são orientadas
+                por dados, pesquisas e contexto de negócio, para garantir que os
+                produtos atendam tanto às necessidades dos usuários quanto às
+                expectativas de negócio.
+              </p>
+              <p class="text-window">
+                Atuei como Product Designer na <strong>Rappi</strong> e também trabalhei
+                com empresas como <strong
+                  >Azul Viagens, Bradesco, Alelo, Novo Nordisk, Marisa,
+                  Mercedes-Benz, Hypera Farma</strong
+                >, entre outras. Nesses projetos, liderei pesquisas, desenvolvi
+                interfaces e participei da implementação de soluções.
+              </p>
+            </WindowBox>
+            <figure>
+              <img
+                src="/images/camila-alves.png"
+                alt="Camila Alves"
+                width="502"
+                height="404"
+                loading="lazy"
+                class="image-window"
+              />
+            </figure>
+          </ContainerText>
+        </div>
+      </section>
+      <section class="skills section-container section-grid-bg">
+        <div class="container">
+          <h2 class="section-title text-pixel">Habilidades</h2>
+          <GridSkills>
+            <div class="skills-group">
+              {
+                skillsTextFirstColumn.map((skill) => {
+                  return (
+                    <WindowBox title={skill.title}>
+                      <ul>
+                        {skill.items.map((item) => {
+                          return (
+                            <li>
+                              <strong>{item.strong}</strong>
+                              {item.text}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </WindowBox>
+                  );
+                })
+              }
+            </div>
+            <div class="skills-group">
+              {
+                skillsTextSecondColumn.map((skill) => {
+                  return (
+                    <WindowBox title={skill.title}>
+                      <ul>
+                        {skill.items.map((item) => {
+                          return (
+                            <li>
+                              <strong>{item.strong}</strong>
+                              {item.text}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </WindowBox>
+                  );
+                })
+              }
+            </div>
+            <div class="skills-group">
+              <WindowBox title={dataSkills.ferramentas.title}>
+                <ul class="skills-tools">
+                  {
+                    dataSkills.ferramentas.tools.map((item) => {
+                      return (
+                        <li>
+                          <img src={`/svg/logo-${item}.svg`} />
+                        </li>
+                      );
+                    })
+                  }
+                </ul>
+              </WindowBox>
+              <WindowBox title={dataSkills.idiomas.title}>
+                <ul class="skills-languages">
+                  {
+                    dataSkills.idiomas.languages.map((item) => {
+                      return (
+                        <li>
+                          <img
+                            src={`/images/flag-${item.flag}.webp`}
+                          />
+                          {item.text}
+                        </li>
+                      );
+                    })
+                  }
+                </ul>
+              </WindowBox>
+            </div>
+          </GridSkills>
+        </div>
+      </section>
+      <section class="more section-container">
+        <div class="container">
+          <ContainerText>
+            <WindowBox
+              slot="window-element"
+              title="Um pouco de mim"
+              variant="dark"
+            >
+              <p class="text-window">
+                Sou curiosa por natureza e estou sempre explorando novas
+                possibilidades. Ter hobbies é meu jeito favorito de explorar o
+                mundo e enxergar as coisas com novos ângulos (às vezes,
+                literalmente).
+              </p>
+              <p class="text-window">
+                Tenho um caso sério com as artes: a música é minha parceira
+                fiel, tocar guitarra é a minha terapia, e a fotografia é onde
+                consigo capturar o mundo do jeito que vejo, sempre com um toque
+                vintage.
+              </p>
+              <p class="text-window">
+                A moda é outra paixão, uma forma de colocar minha criatividade
+                para jogo todos os dias (mesmo quando é sobre escolher um look
+                confortável). Também sou fã de momentos como devorar livros em
+                cafeterias superfaturadas ou assistir a todos os filmes que
+                estão em cartaz. Ah, e recentemente descobri o pilates que tem
+                me desafiado de uma forma que me deixa renovada.
+              </p>
+              <p class="text-window">
+                Explorar um mundo de possibilidades é o que me mantém inspirada
+                e renovada.
+              </p>
+            </WindowBox>
+            <FloatingIcons />
+          </ContainerText>
+        </div>
+      </section>
+    </main>
+    <Footer showLargeContent={true} />
+  </body>
+</html>
+
+<style>
+  .hero {
+    padding-block: 32px;
+    text-align: center;
+
+    @container main-container (width >= 1024px) {
+      padding-block: 136px;
+    }
+
+    br {
+      display: none;
+
+      @container main-container (width >= 1024px) {
+        display: initial;
+      }
+    }
+  }
+
+  .hero-title {
+    max-width: 920px;
+    margin-inline: auto;
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-shadow: #ffffff25 1px 0 10px;
+
+    @container main-container (width >= 1024px) {
+      font-size: 3rem;
+    }
+
+    span {
+      color: var(--color-dark-secondary-100);
+    }
+  }
+
+  .hero-sub-title {
+    font-weight: 500;
+    font-size: 1rem;
+    text-shadow: #ffffff25 1px 0 10px;
+
+    @container main-container (width >= 1024px) {
+      font-size: 1.25rem;
+    }
+
+    &:not(:last-child) {
+      margin-block-end: 24px;
+    }
+  }
+
+  .more {
+    overflow: hidden;
+  }
+
+  .section-container {
+    padding-block: 80px;
+
+    @container main-container (width >= 1024px) {
+      padding-block: 120px;
+    }
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--_section-title-color, var(--color-white));
+
+    @container main-container (width >= 1024px) {
+      font-size: 3.25rem;
+    }
+
+    &:not(:last-child) {
+      margin-block-end: 40px;
+
+      @container main-container (width >= 1024px) {
+        margin-block-end: 52px;
+      }
+    }
+  }
+
+  .skills {
+    --_bg-line-color: var(--color-dark-line-2);
+    --_section-title-color: var(--color-dark-primary-100);
+
+    background-color: var(--color-dark-secondary-100);
+
+    ul:not(.skills-tools):not(.skills-languages) {
+      padding-inline-start: 24px;
+    }
+  }
+
+  .skills-group {
+    > * {
+      &:not(:last-child) {
+        margin-block-end: 24px;
+
+        @container main-container (width >= 1024px) {
+          margin-block-end: 12px;
+        }
+      }
+    }
+  }
+
+  .skills-languages {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &:not(:last-child) {
+        margin-block-end: 16px;
+      }
+
+      img {
+        min-width: 24px;
+        max-width: 24px;
+        height: 16px;
+      }
+    }
+  }
+
+  .skills-tools {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 22px;
+    padding-inline-start: 0;
+
+    img {
+      display: block;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .text-window {
+    &:not(:last-child) {
+      margin-block-end: 24px;
+    }
+  }
+</style>

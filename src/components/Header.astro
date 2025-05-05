@@ -1,0 +1,236 @@
+---
+import { Menu as IconMenu, X as IconX } from "lucide-astro";
+
+import HeaderLink from "./HeaderLink.astro";
+import HeaderLinkMobile from "./HeaderLinkMobile.astro";
+
+import { ROUTES } from "@/consts";
+---
+
+<header>
+  <nav class="nav container">
+    <button
+      aria-label="Abrir menu de navegação"
+      class="action-menu-open"
+      id="action-menu-open"
+    >
+      <IconMenu />
+    </button>
+    <div class="internal-links">
+      <HeaderLink href={ROUTES.work}>Meu trabalho</HeaderLink>
+      <HeaderLink href={ROUTES.about}>Sobre mim</HeaderLink>
+      <HeaderLink highlight={true} href="#" target="_blank"
+        >Currículo</HeaderLink
+      >
+    </div>
+    <div class="internal-links-mobile">
+      <HeaderLink highlight={true} href="#" target="_blank"
+        >Currículo</HeaderLink
+      >
+    </div>
+    <div class="window-controls">
+      <span class="min"></span>
+      <span class="square"></span>
+      <span class="close"></span>
+    </div>
+  </nav>
+
+  <dialog class="dialog" id="dialog-menu-mobile">
+    <button
+      aria-label="Fechar menu de navegação"
+      class="action-menu-close"
+      id="action-menu-close"
+    >
+      <IconX />fechar
+    </button>
+    <HeaderLinkMobile href={ROUTES.work}>Meu trabalho</HeaderLinkMobile>
+    <HeaderLinkMobile href={ROUTES.about}>Sobre mim</HeaderLinkMobile>
+  </dialog>
+</header>
+
+<script>
+  const actionMenuOpen = document.getElementById("action-menu-open");
+  const actionMenuClose = document.getElementById("action-menu-close");
+  const dialog = document.getElementById("dialog-menu-mobile");
+
+  actionMenuOpen?.addEventListener("click", () => {
+    (dialog as HTMLDialogElement)?.showModal();
+  });
+
+  actionMenuClose?.addEventListener("click", () => {
+    (dialog as HTMLDialogElement)?.close();
+  });
+
+  const links = dialog?.querySelectorAll("a");
+
+  links?.forEach((link) => {
+    link.addEventListener("click", () => {
+      (dialog as HTMLDialogElement)?.close();
+    });
+  });
+</script>
+
+<style>
+  .action-menu-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding-block: 8px;
+    padding-inline: 8px;
+    border-radius: 2px;
+    font-size: 1.125rem;
+    color: var(--color-dark-primary-100);
+    background: transparent;
+    transition: background 0.25s ease-in-out;
+
+    &:not(:last-child) {
+      margin-block-end: 24px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 2;
+    }
+  }
+
+  .action-menu-open {
+    padding: 0;
+    background: transparent;
+
+    @container main-container (width >= 768px) {
+      display: none;
+    }
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .dialog {
+    /* UPDATE: --open / syncs styles with dialog state */
+    --open: 1;
+    /* READ: --closed / exposed for styling convenience */
+    --closed: calc(1 - var(--open));
+
+    width: 240px;
+    height: 100dvh;
+    max-height: 100dvh;
+    padding-block: 24px;
+    padding-inline: 24px;
+    border: none;
+    inset-block-start: 0;
+    inset-block-end: auto;
+    inset-inline-start: -240px;
+    inset-inline-end: auto;
+    background: var(--color-dark-secondary-100);
+    transform: translateX(calc(var(--closed) * 100%));
+
+    &[open] {
+      --open: 0;
+    }
+
+    &::backdrop {
+      background: #232323b2;
+    }
+
+    &,
+    &::backdrop {
+      /* This works like a conditional statement */
+      --duration: calc((var(--open) * 0.25s) + (var(--closed) * 0.25s));
+
+      transition: all var(--duration) ease-in-out allow-discrete;
+      /* opacity: var(--open); */
+    }
+
+    @starting-style {
+      --open: 0;
+
+      &[open] {
+        --open: 1;
+      }
+    }
+
+    > a {
+      &:not(:last-child) {
+        margin-block-end: 4px;
+      }
+    }
+  }
+
+  header {
+    padding-block: 24px;
+    background: var(--color-dark-primary-100);
+
+    @container main-container (width >= 768px) {
+      padding-block: 32px;
+    }
+  }
+
+  .internal-links {
+    display: none;
+    gap: 32px;
+    align-items: center;
+
+    @container main-container (width >= 768px) {
+      display: flex;
+    }
+  }
+
+  .internal-links-mobile {
+    @container main-container (width >= 768px) {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .window-controls {
+    display: none;
+    align-items: flex-end;
+    gap: 24px;
+    margin-inline-start: auto;
+
+    @container main-container (width >= 768px) {
+      display: flex;
+    }
+
+    .min {
+      width: 14px;
+      height: 4px;
+      background: var(--color-white);
+    }
+
+    .square {
+      width: 12px;
+      height: 12px;
+      background: var(--color-white);
+    }
+
+    .close {
+      width: 14px;
+      height: 3px;
+      background: var(--color-white);
+      position: relative;
+      top: -4px;
+      rotate: 45deg;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 3px;
+        background: var(--color-white);
+        rotate: 90deg;
+      }
+    }
+  }
+</style>
