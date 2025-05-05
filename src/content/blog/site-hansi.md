@@ -9,7 +9,7 @@ title: 'Design de interface para site institucional'
 
 A Hansi é uma fornecedora líder de adesivos e selantes sob medida, especializada em aplicações para produtos industriais e de consumo. Com um portfólio de soluções altamente técnicas e customizáveis, a empresa <b>precisava de uma plataforma digital que fosse capaz de comunicar claramente a qualidade e a versatilidade de seus produtos para clientes e parceiros</b>. O objetivo era garantir que os usuários pudessem entender facilmente o que a Hansi faz, os produtos que oferece e como essas soluções podem ser aplicadas no dia a dia industrial.
 
-![image info](/images/blog-posts/site-hansi/hansi-gif-company.gif)
+<img src="/images/blog-posts/site-hansi/hansi-gif-company.gif" alt="image info" width="800"/>
 
 ## Desafios identificados
 
@@ -38,7 +38,7 @@ O site da Hansi, na versão anterior, apresentava algumas dificuldades para os u
 ### Preocupação com o Idioma
 - Como o site foi desenvolvido nas versões alemã e inglesa, houve um cuidado especial para garantir que as palavras maiores do alemão se ajustassem adequadamente ao layout. Adaptei o design para que o texto em ambas as línguas fosse exibido de maneira equilibrada e sem comprometer a estética ou a legibilidade.
 
-![image info](/images/blog-posts/site-hansi/hansi-gif-language.gif)
+<img src="/images/blog-posts/site-hansi/hansi-gif-language.gif" alt="image info" width="800"/>
 
 ### Responsividade
 - Tornei o site totalmente responsivo, garantindo que fosse igualmente funcional em qualquer dispositivo, seja desktop, tablet ou celular.
@@ -48,4 +48,5 @@ O site da Hansi, na versão anterior, apresentava algumas dificuldades para os u
 
 O redesign do site institucional da Hansi alinhou a presença digital da empresa à sua visão de fornecer soluções industriais de alta qualidade. Ao focar na usabilidade, clareza e apresentação de seus produtos, conseguimos criar uma experiência mais envolvente e acessível para os clientes. O projeto não só melhorou a comunicação e visibilidade da marca, mas também trouxe um impacto positivo nas conversões e nas interações com os usuários.
 
-![image info](/images/blog-posts/site-hansi/hansi-gif-general.gif)
+<img src="/images/blog-posts/site-hansi/hansi-gif-general.gif" alt="image info" width="800"/>
+

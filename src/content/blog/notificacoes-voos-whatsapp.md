@@ -6,8 +6,9 @@ heroImage: '/images/blog-hero/zurich.jpg'
 pubDate: 'May 02 2025'
 title: 'Serviço de notificações de voos por WhatsApp.'
 ---
-
 Ao assumir o desafio de melhorar a experiência dos passageiros no Aeroporto de Vitória (ES), identifiquei a necessidade de uma solução acessível, eficiente e intuitiva. Como UX Designer responsável pelo projeto</b>, meu objetivo era <b>reduzir a ansiedade dos viajantes</b> ao proporcionar informações de voo em tempo real diretamente pelo WhatsApp, um canal amplamente utilizado e de fácil adoção.
+
+<img src="/images/blog-posts/notificacoes-voos-whatsapp/zurich-img-01.png" alt="image info" width="100%"/>
 
 ## Objetivo
 
@@ -28,17 +29,20 @@ A solução proposta foi um serviço de notificação via WhatsApp, fundamentado
 
 ## Como funciona
 
-1. O passageiro escaneia um <b>QR Code</b> estrategicamente posicionado no aeroporto.
-2. É redirecionado para uma <b>conversa no WhatsApp</b> e insere os dados do seu voo.
-3. Passa a receber notificações automáticas, incluindo:
-- Atualização do status do voo.
-- Alteracoes de portão de embarque.
-- Chamadas de embarque e última chamada.
-- Notificações sobre atrasos e cancelamentos.
+<ol>
+  <li>O passageiro escaneia um <b>QR Code</b> estrategicamente posicionado no aeroporto.</li>
+  <li>É redirecionado para uma <b>conversa no WhatsApp</b> e insere os dados do seu voo.</li>
+  <li>Passa a receber notificações automáticas, incluindo:
+    <ul>
+      <li>Atualização do status do voo.</li>
+      <li>Alteracoes de portão de embarque.</li>
+      <li>Chamadas de embarque e última chamada.</li>
+      <li>Notificações sobre atrasos e cancelamentos.</li>
+    </ul>
+  </li>
+</ol>
 
-![image info](/images/blog-posts/notificacoes-voos-whatsapp/zurich-img-01.png)
-
-![image info](/images/blog-posts/notificacoes-voos-whatsapp/zurich-img-02.png)
+<img src="/images/blog-posts/notificacoes-voos-whatsapp/zurich-img-02.png" alt="image info" width="800px"/>
 
 ## Testes e Iteração
 
@@ -55,4 +59,5 @@ Após o sucesso da implementação, a solução foi posteriormente <b>replicada 
 
 Esse projeto foi um exemplo claro de como o UX Design pode impactar positivamente a experiência do usuário em um ambiente crítico como um aeroporto. Ao focar nas necessidades reais dos passageiros e utilizar tecnologias familiares, <b>conseguimos oferecer uma solução eficiente e bem aceita</b>. Criamos experiências centradas no usuário enquanto lidamos com as limitações do projeto, neste caso, o tempo disponível para desenvolver a solução.
 
-![image info](/images/blog-posts/notificacoes-voos-whatsapp/zurich-img-03.png)
+<img src="/images/blog-posts/notificacoes-voos-whatsapp/zurich-img-03.png" alt="image info" width="800px"/>
+

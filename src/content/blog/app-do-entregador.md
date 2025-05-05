@@ -6,7 +6,6 @@ heroImage: '/images/blog-hero/box.png'
 pubDate: 'May 03 2025'
 title: 'Box Delivery – Aplicativo para Entregadores com Foco em Usabilidade e Performance'
 ---
-
 ## O desafio
 
 Quando a <b>Box Delivery</b> decidiu lançar um novo aplicativo para entregadores, o objetivo era claro: melhorar a experiência dos profissionais e otimizar o desempenho nas entregas. Como UX Designer responsável por esse projeto, sabia que esse desafio envolvia muito mais do que apenas criar uma interface bonita, era sobre entender as reais necessidades dos entregadores e garantir que a tecnologia fosse uma aliada no dia a dia deles.
@@ -48,7 +47,7 @@ Esse mapa é atualizado em tempo real, o que significa que, enquanto o entregado
 3. Maximização dos Ganhos
 4. Redução do Tempo ocioso.
 
-![image info](/images/blog-posts/app-do-entregador/box-img-02.png)
+<img src="/images/blog-posts/app-do-entregador/box-img-02.png" alt="image info" width="300"/>
 
 ### Também desenvolvemos outras funcionalidades importantes como:
 - <b>Central de Notificações:</b> As notificações agora são organizadas de forma clara e prática, permitindo que os entregadores marquem como lidas ou não lidas e nunca percam uma informação importante.
@@ -60,5 +59,4 @@ Ao final, o aplicativo não só atendeu às expectativas dos entregadores, mas t
 
 ### Veja no youtube um pouco de como esse aplicativo funciona na prática:
 
-[![Novo App da Box | Entrega de Responsa - Episódio 1](https://img.youtube.com/vi/M7j0A2dbwHg/0.jpg)](https://www.youtube.com/watch?v=M7j0A2dbwHg)
-
+<iframe width="100%" height="480px" src="https://www.youtube.com/embed/M7j0A2dbwHg?si=-fXUu74SP_gMBimd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -41,9 +41,9 @@ Optamos por usar uma interface clean, reduzindo a carga cognitiva. O layout prio
 3. O sistema calcula automaticamente o desconto aplicável com base nas regras do DUF.
 4. O resultado é apresentado de forma clara, indicando a economia gerada.
 
-![image info](/images/blog-posts/calculadora-de-descontos/eco-img-01.png)
+<img src="/images/blog-posts/calculadora-de-descontos/eco-img-01.png" alt="Imagem com três protótipos de aplicativo em um celular. A primeira tela mostra o menu para iniciar a simulação. A segunda exibe o cálculo de tarifas, com campos para escolher um pedágio, a categoria do veículo e o número de passagens. A terceira tela mostra o resultado com valor da tarifa cheia, desconto aplicado, valor final e um botão de 'Novo cálculo'" width="800px"/>
 
-![image info](/images/blog-posts/calculadora-de-descontos/eco-img-02.png)
+<img src="/images/blog-posts/calculadora-de-descontos/eco-img-02.png" alt="Imagem com um protótipo de desktop. Exibe o cálculo de tarifas, com campos para escolher um pedágio, a categoria do veículo e o número de passagens com o botão 'Calcular'." width="800px"/>
 
 ## Impacto e Resultados
 
