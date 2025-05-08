@@ -9,7 +9,7 @@ title: 'Como elementos de gamificação influenciam o engajamento em apps de ati
 
 Durante minha pós-graduação em <b>User Experience Design and Beyond pela PUCRS</b>, conduzi um estudo com foco em entender <b>como elementos de gamificação em aplicativos de atividades físicas podem influenciar o engajamento e a persistência dos usuários</b>. Mais do que um trabalho acadêmico, esse projeto se tornou uma imersão em comportamento humano, motivação e design centrado no usuário.
 
-Para conferir o projeto completo, basta <a href="/document/TCC - UX DESIGN AND BEYOND.pdf"> clicar aqui.</a>
+Para conferir o projeto completo, basta <a href="/document/TCC - UX DESIGN AND BEYOND.pdf" target="_blank"><b> clicar aqui</b></a>.
 
 ## O desafio
 
@@ -41,7 +41,7 @@ A revisão teórica ajudou a estruturar o olhar crítico sobre o comportamento d
 - Pesquisa quantitativa com 30 usuários de apps fitness
 - Entrevistas com 5 participantes de perfis variados
 
-##Definição
+## Definição
 
 Refinei a questão central: <b><i>“Como elementos de gamificação influenciam o engajamento em apps de atividade física?”</i></b>
 
@@ -51,7 +51,7 @@ A pesquisa quantitativa com 30 usuários de aplicativos de atividades físicas r
 
 Abaixo é possível visualizar com mais detalhamento o resultado.
 
-<img src="/images/blog-posts/tcc-case/tcc-img-graphic.png" alt="image info" width="800"/>
+<img src="/images/blog-posts/tcc-case/tcc-img-graphic.png" alt="image info" width="100%"/>
 
 ## Resultados do método qualitativo
 
@@ -59,7 +59,7 @@ A partir da análise quantitativa, recrutei participantes com perfis variados pa
 
 A seguir, apresento os perfis das cinco personas entrevistadas
 
-<img src="/images/blog-posts/tcc-case/tcc-img-personas.png" alt="image info" width="800"/>
+<img src="/images/blog-posts/tcc-case/tcc-img-personas.png" alt="image info" width="100%"/>
 
 
 A combinação de dados revelou quatro grandes motores de motivação:
@@ -102,6 +102,8 @@ Aprendi que:
 - Design é uma ponte entre intenção e ação. Quando bem construída, ela transforma a jornada.
 
 Esse estudo reforça como UX transforma não só a jornada do usuário, mas também seus hábitos e sua vida.
+
+Para conferir o projeto completo, basta <a href="/document/TCC - UX DESIGN AND BEYOND.pdf" target="_blank"><b> clicar aqui</b></a>.
 
 
 
