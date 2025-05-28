@@ -1,5 +1,5 @@
 ---
-area:
+area: 'UX Research' 'UX Design'
 description: 'Como elementos de gamificação em aplicativos de atividades físicas podem influenciar o engajamento e a persistência dos usuários'
 groups: ['Pesquisa']
 heroImage: '/images/blog-hero/tcc-img.jpg'
