@@ -38,8 +38,8 @@ const posts = (await getCollection("blog")).sort(
             UX/UI Designer | Product Designer
           </p>
           <h1 class="hero-title">
-            Olá! Sou a <span>Camila</span> e design é minha ferramenta para criar
-            <span>experiências</span> que conectam pessoas e negócios.
+            Olá! Sou a <span>Camila</span> e design é minha ferramenta para criar <br class="hide" />
+            <span class="blink" id="text"></span> <br />que conectam pessoas e negócios.
           </h1>
         </div>
       </section>
@@ -208,10 +208,64 @@ Atualmente, atuo como <strong>UI Designer na Natura</strong>, com experiência a
       </section>
     </main>
     <Footer showLargeContent={true} />
+
+    <script>
+      const palavras = ["soluções", "experiências", "produtos"];
+      const textElement = document.getElementById("text");
+      let palavraIndex = 0;
+  
+      function digitarTexto(texto: string, callback: () => void) {
+        let i = 0;
+        const intervalo = setInterval(() => {
+          (textElement as HTMLElement).textContent += texto.charAt(i);
+          i++;
+          if (i === texto.length) {
+            clearInterval(intervalo);
+            setTimeout(callback, 5000); // espera antes de apagar
+          }
+        }, 100);
+      }
+  
+      function apagarTexto(callback: () => void) {
+        let texto = (textElement as HTMLElement).textContent;
+        let i = texto ? texto?.length : 0;
+        const intervalo = setInterval(() => {
+          (textElement as HTMLElement).textContent = texto ? texto.substring(0, i - 1) : null;
+
+          i--;
+
+          if (i === 0) {
+            clearInterval(intervalo);
+            callback();
+          }
+        }, 50);
+      }
+  
+      function loop() {
+        digitarTexto(palavras[palavraIndex], () => {
+          apagarTexto(() => {
+            palavraIndex = (palavraIndex + 1) % palavras.length;
+            loop();
+          });
+        });
+      }
+  
+      loop();
+    </script>
+
   </body>
 </html>
 
+
+
 <style>
+  .blink {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--color-dark-secondary-100);
+    animation: blink-caret 0.7s step-end infinite;
+  }
+
   .hero {
     padding-block: 32px;
     text-align: center;
@@ -220,12 +274,10 @@ Atualmente, atuo como <strong>UI Designer na Natura</strong>, com experiência a
       padding-block: 136px;
     }
 
-    br {
-      display: none;
-
+    .hide {
       @container main-container (width >= 1024px) {
-        display: initial;
-      }
+        display: none;
+      } 
     }
   }
 
@@ -351,4 +403,9 @@ Atualmente, atuo como <strong>UI Designer na Natura</strong>, com experiência a
       margin-block-end: 24px;
     }
   }
+
+  @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: var(--color-dark-secondary-100); }
+    }
 </style>
