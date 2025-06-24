@@ -4,7 +4,8 @@ description: 'Here is a sample of some basic Markdown syntax that can be used wh
 groups: ['Figma']
 heroImage: '/images/blog-hero/rappi-ds.jpg'
 pubDate: 'Jun 24 2025'
-title: 'Serviço de notificações de voos por WhatsApp.'
+singleImage: 'true'
+title: 'Design System'
 ---
 ![image info](/images/blog-posts/rappi/rappi-ds.png)
 

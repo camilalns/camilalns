@@ -4,6 +4,7 @@ description: 'Como elementos de gamificação em aplicativos de atividades físi
 groups: ['Pesquisa']
 heroImage: '/images/blog-hero/tcc-img.jpg'
 pubDate: 'May 08 2025'
+singleImage: 'false'
 title: 'Como elementos de gamificação influenciam o engajamento em apps de atividade física?'
 ---
 

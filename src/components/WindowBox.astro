@@ -1,4 +1,4 @@
-<div class="window-box" data-variant={Astro.props.variant || null}>
+<div class="window-box" data-single-image={Astro.props.singleImage} data-variant={Astro.props.variant || null}>
   <header class="window-header">
     {Astro.props.windowTitle && <p>{Astro.props.windowTitle}</p>}
     <div class="window-controls">
@@ -22,6 +22,7 @@
     color: #373737;
     background: #f4f0ed;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
     &[data-variant="dark"] {
       color: var(--color-white);
       background: var(--color-dark-primary-100);
@@ -30,6 +31,12 @@
         @container main-container (width >= 1024px) {
           font-size: 3.25rem;
         }
+      }
+    }
+
+    &[data-single-image="true"] {
+      .window-content {
+        padding-inline: 0;
       }
     }
   }

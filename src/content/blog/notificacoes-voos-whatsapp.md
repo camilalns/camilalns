@@ -4,6 +4,7 @@ description: 'Ao assumir o desafio de melhorar a experiência dos passageiros no
 groups: ['Responsive website', 'Figma']
 heroImage: '/images/blog-hero/zurich.jpg'
 pubDate: 'May 02 2025'
+singleImage: 'false'
 title: 'Serviço de notificações de voos por WhatsApp.'
 ---
 Ao assumir o desafio de melhorar a experiência dos passageiros no Aeroporto de Vitória (ES), identifiquei a necessidade de uma solução acessível, eficiente e intuitiva. Como UX Designer responsável pelo projeto</b>, meu objetivo era <b>reduzir a ansiedade dos viajantes</b> ao proporcionar informações de voo em tempo real diretamente pelo WhatsApp, um canal amplamente utilizado e de fácil adoção.

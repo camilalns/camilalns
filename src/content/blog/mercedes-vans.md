@@ -4,6 +4,7 @@ description: 'Como UX/UI Designer deste projeto, fui responsável pela criação
 groups: ['Responsive website', 'Illustrator', 'Adobe XD']
 heroImage: '/images/blog-hero/mercedes.png'
 pubDate: 'Apr 30 2025'
+singleImage: 'false'
 title: 'Mercedes-Benz - Configurador de vans'
 ---
 

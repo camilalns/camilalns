@@ -4,6 +4,7 @@ description: 'Como UX Designer responsável por esse projeto, sabia que esse des
 groups: ['App Mobile', 'Figma']
 heroImage: '/images/blog-hero/box.png'
 pubDate: 'May 03 2025'
+singleImage: 'false'
 title: 'Box Delivery – Aplicativo para Entregadores com Foco em Usabilidade e Performance'
 ---
 ## O desafio

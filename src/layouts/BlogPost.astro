@@ -8,7 +8,7 @@ import WindowBox from "@/components/WindowBox.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { area, title, description, groups } = Astro.props;
+const { area, title, description, groups, singleImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -28,7 +28,7 @@ const { area, title, description, groups } = Astro.props;
               {groups?.map((item) => <span>{item}</span>)}
             </p>
           </div>
-          <WindowBox variant="dark">
+          <WindowBox singleImage={singleImage} variant="dark">
             <div class="content">
               <slot />
             </div>
