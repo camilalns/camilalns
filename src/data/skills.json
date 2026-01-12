@@ -53,9 +53,9 @@
     "id": "idiomas",
     "title": "Idiomas",
     "languages": [
-      { "flag": "br", "text": "Português - Nativo" },
       { "flag": "us", "text": "Inglês - Avançado" },
-      { "flag": "mx", "text": "Espanhol - Básico | Em curso" }
+      { "flag": "mx", "text": "Espanhol - Básico | Em curso" },
+      { "flag": "br", "text": "Português - Nativo" }
     ]
   }
 }
