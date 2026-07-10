@@ -32,14 +32,29 @@ const posts = (await getCollection("blog")).sort(
   <body>
     <Header />
     <main>
-      <section class="hero">
+     <section class="more section-container" id="sobre-mim">
         <div class="container">
-          <p class="hero-sub-title text-pixel">
-          Product Designer em São Paulo, SP
-          </p>
-          <h1 class="hero-title">
-            Olá! Sou a <span>Camila</span> e design é minha ferramenta para criar <span>experiências</span> que conectam pessoas e negócios.
-          </h1>
+          <ContainerText>
+            <WindowBox
+              slot="window-element"
+              title="Oi, sou a Camila"
+              variant="dark"
+            >
+            <p class="text-window">
+             Atualmente, trabalho como <b>Product Designer na Natura & Co</b>, focada em plataformas de educação para consultoras de beleza na América Latina. Antes disso, passei pela Rappi na vertical de entregadores, onde conduzia pesquisas de campo e prototipava soluções estratégicas.</p>
+                <p>Com 10 anos de trajetória em tecnologia e <b>pós-graduada em UX Design pela PUCRS</b>, iniciei minha carreira como desenvolvedora front-end, tenho uma base sólida para trabalhar em sintonia com times técnicos. Minha abordagem combina <b>pesquisa, dados e estratégia de design</b> para conectar as necessidades dos usuários aos resultados do negócio.</p>
+            </WindowBox>
+            <figure>
+              <img
+                src="/images/camila-alves.png"
+                alt="Camila Alves"
+                width="502"
+                height="404"
+                loading="lazy"
+                class="image-window"
+              />
+            </figure>
+          </ContainerText>
         </div>
       </section>
       <section class="projects section-container" id="meu-trabalho">
@@ -59,34 +74,7 @@ const posts = (await getCollection("blog")).sort(
           </GridProjects>
         </div>
       </section>
-      <section class="more section-container" id="sobre-mim">
-        <div class="container">
-          <ContainerText>
-            <WindowBox
-              slot="window-element"
-              title="Minha jornada"
-              variant="dark"
-            >
-              <p class="text-window">
-                Sou <strong>pós-graduada em User Experience Design pela PUCRS</strong> e <strong>atuo há 10 anos na área de tecnologia</strong>. Tenho formação em <strong>Análise e Desenvolvimento de Sistemas</strong> e iniciei minha carreira como <strong>desenvolvedora front-end</strong>, o que me dá uma base sólida para atuar de forma colaborativa com times de tecnologia.
-              <p class="text-window">
-                Atuo na interseção entre <strong>usuário, negócio e tecnologia</strong>, com foco em resolver problemas reais por meio de <strong>pesquisa, estratégia e design de produtos escaláveis</strong>.<p class="text-window">
-                Como <strong>Product Designer na Natura & CO</strong>, atuo na vertical dedicada às plataformas utilizadas por consultoras de beleza Brasil e Hispana. Anteriormente, fui <strong>Product Designer na Rappi</strong>, com foco na vertical de entregadores, <strong>conduzi pesquisas em campo, alinhando soluções com stakeholders e prototipando soluções com impacto direto na operação logística da empresa</strong>.
-              </p>
-            </WindowBox>
-            <figure>
-              <img
-                src="/images/camila-alves.png"
-                alt="Camila Alves"
-                width="502"
-                height="404"
-                loading="lazy"
-                class="image-window"
-              />
-            </figure>
-          </ContainerText>
-        </div>
-      </section>
+      
       <section class="skills section-container section-grid-bg">
         <div class="container">
           <h2 class="section-title text-pixel">Habilidades</h2>
@@ -176,7 +164,7 @@ const posts = (await getCollection("blog")).sort(
               <p class="text-window">
               Minha relação com o design nasce do encontro entre diferentes interesses criativos. A moda treinou meu olhar estético, a música ampliou minha sensibilidade e a fotografia me ensinou a observar o mundo com mais atenção. Essas influências moldam não só o que crio, mas principalmente como penso experiências. </p>
               <p class="text-window">
-              Vejo o design como uma ferramenta para simplificar, conectar e tornar a tecnologia mais próxima das pessoas. Meu objetivo é criar experiências claras, intuitivas e relevantes, que se integrem de forma natural ao cotidiano e façam sentido para quem as utiliza.</p>
+              Vejo o design como uma ferramenta para simplificar, conectar e tornar a tecnologia mais próxima das pessoas. Meu objetivo é criar experiências intuitivas, que se integrem no cotidiano e façam sentido para quem as utiliza.</p>
             </WindowBox>
             <FloatingIcons />
           </ContainerText>
