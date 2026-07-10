@@ -7,6 +7,7 @@ pubDate: 'May 03 2025'
 singleImage: 'false'
 title: 'Box Delivery – Aplicativo para Entregadores com Foco em Usabilidade e Performance'
 ---
+
 ## O desafio
 
 Quando a <b>Box Delivery</b> decidiu lançar um novo aplicativo para entregadores, o objetivo era claro: melhorar a experiência dos profissionais e otimizar o desempenho nas entregas. Como UX Designer responsável por esse projeto, sabia que esse desafio envolvia muito mais do que apenas criar uma interface bonita, era sobre entender as reais necessidades dos entregadores e garantir que a tecnologia fosse uma aliada no dia a dia deles.
